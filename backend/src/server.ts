@@ -12,10 +12,10 @@ app.use(helmet())
 
 app.post('/', (req: Request, res: Response) => {
   console.log(req.body);
-  //console.log(req.cookies); aparece como undefined
+  console.log(req.cookies); //aparece como undefined
   console.log(req.rawHeaders[req.rawHeaders.length - 1]);
   
-  console.log(getCookie('token', req))
+  // console.log(getCookie('token', req))
   
   res.cookie('token', 'umtokenaleatorio', {
     httpOnly: true,
